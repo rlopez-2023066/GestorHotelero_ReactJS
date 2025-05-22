@@ -1,19 +1,16 @@
+import React from 'react';
 import { useRoutes } from "react-router-dom"
-import { AuthPage } from "./pages/Auth/AuthPage"
-import { routes } from "./routes"
-import { Toaster } from "react-hot-toast"
+import { Toaster } from 'react-hot-toast';
+import {routes} from './routes';
 
-
-//Exportación por default
 function App() {
   const elements = useRoutes(routes)
-
   return (
-    <>
-      { elements }
-      <Toaster position='bottom-right' reverseOrder={false}/>
-    </>
+   <>
+    {elements}
+    <Toaster position='bottom-rigth' reverseOrder={false} />
+   </>
   )
 }
 
-export default App
+export default App;
