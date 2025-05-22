@@ -1,23 +1,48 @@
-import { AuthPage } from "./pages/Auth/AuthPage";
-import { DashboardPage } from "./pages/Dashboard/DashboardPage";
-import { NotFoundPage } from "./pages/NotFound/NotFoundPage";
+import HotelsTable from "./Components/Tables/HotelsTable";
+import { AuthPages } from "./Pages/Auth/AuthPages";
+import DashboardAdmin from "./Pages/Dashboard/DashboardAdmin";
+import { NotFoundPages } from "./Pages/NotFound/NotFoundPages";
+import DashboardAdminHotel from "./Pages/Dashboard/DashboardAdminHotel";
+import { DashboardClient } from "./Pages/Dashboard/DashboardClient";
+import ProtectedRoute from "./Shared/hooks/ProtectedRoute";
 
 export const routes = [
     {
         path: '/', 
-        element: <AuthPage />,
+        element: <AuthPages />,
     },
     {
         path: '/auth', 
-        element: <AuthPage />
+        element: <AuthPages />
     },
     {
-        path: '/dashboard',
-        element: <DashboardPage />
+        path: '/dashboardAdmin',
+        element: (
+        <ProtectedRoute>
+            <DashboardAdmin />
+        </ProtectedRoute>
+        )
+    },
+    {
+        path: '/dashboardHotelAdmin',
+        element: (
+        <ProtectedRoute>
+            <DashboardAdminHotel />
+        </ProtectedRoute>
+        )
+    },
+    {
+        path: '/dashboardClient',
+        element: (
+        <ProtectedRoute>
+            <DashboardClient />
+        </ProtectedRoute>
+        )
     },
     {
         path: '*',
-        element: <NotFoundPage />
-    }
+        element: <NotFoundPages />
+    },
+    
 
 ]
