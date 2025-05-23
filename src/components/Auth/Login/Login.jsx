@@ -3,11 +3,11 @@ import styled from 'styled-components';
 import { Mail, Lock } from 'lucide-react';
 import imgLogin from './../../../img/Logo_img1.jpg';
 import { useLogin } from '../../../shared/hooks/useLogin';
-import {
-  usernameValidationMessage,  
+import {    
   validatePassword,
-  validateUsername,
-  passwordValidationMessage
+  passwordValidationMessage,
+  validateLogin,
+  validateLoginMessage
 } from '../../../shared/validations/validator';
 
 export const Login = ({ switchAuthHandler }) => {
@@ -41,7 +41,7 @@ export const Login = ({ switchAuthHandler }) => {
     let isValid = false;
     switch(field) {
       case 'username':
-        isValid = validateUsername(value);
+        isValid = validateLogin(value);
         break;
       case 'password':
         isValid = validatePassword(value);
@@ -84,7 +84,7 @@ export const Login = ({ switchAuthHandler }) => {
           />
         </div>
         {formData.username.showError && (
-          <div className="text-red-600 font-bold">{usernameValidationMessage}</div>
+          <div className="text-red-600 font-bold">{validateLoginMessage}</div>
         )}
         
         <div className="flex-column">
