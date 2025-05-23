@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Mail, Lock } from 'lucide-react';
 import imgLogin from './../../../img/Logo_img1.jpg';
-import { useLogin } from '../../../Shared/hooks/useLogin';
+import { useLogin } from '../../../shared/hooks/useLogin';
 import {
   usernameValidationMessage,  
   validatePassword,
   validateUsername,
   passwordValidationMessage
-} from '../../../Shared/validations/validator';
+} from '../../../shared/validations/validator';
 
 export const Login = ({ switchAuthHandler }) => {
   const { login } = useLogin();
