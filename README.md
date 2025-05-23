@@ -1,12 +1,74 @@
-# React + Vite
+# 🏨 Sistema de Gestión Hotelera - CRUD de Hoteles
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+¡Bienvenidos a **HotelHub**!  
+Una aplicación web que representa el primer paso hacia una plataforma integral para la gestión hotelera en la nube.  
+Actualmente, este sistema se encuentra en desarrollo y **ya cuenta con una funcionalidad sólida para el manejo de hoteles** (¡sí, solo CRUD de hoteles por ahora... pero con estilo! 😉).
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ ¿Qué hace esta app?
 
-## Expanding the ESLint configuration
+Este sistema permite:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 📥 **Crear** nuevos hoteles con todos sus datos relevantes (nombre, dirección, categoría, precios, comodidades... lo que sueñes).
+- 🧐 **Leer** la lista de hoteles registrados en la plataforma (¡incluso puedes buscar tus favoritos!).
+- 🔄 **Actualizar** la información de hoteles fácilmente.
+- ❌ **Eliminar** hoteles que ya no estén operativos o que simplemente... no lo lograron 😅.
+
+---
+
+## 🚀 ¿Por qué lo hicimos?
+
+Porque sabíamos que el primer ladrillo de una gran plataforma es un CRUD bien hecho.  
+Queremos construir una solución sólida, eficiente y elegante para el sector hotelero, y este es solo el **inicio del viaje**.
+
+---
+
+## 👥 Equipo de desarrollo
+
+Este proyecto fue desarrollado con pasión, sueño y mucho café por:
+
+- 🧠 Rene Alfredo López Castellanos  
+- ⚙️ Paolo Isaac Consuegra Martinez  
+- 🔍 Diego Antonio Marroquín Franco  
+- 📊 José David Retana Retana  
+- 🧪 Jose Luis Alejandro Estrada Hernández  
+
+¡Orgullosos de haber creado esta base para un sistema que promete mucho más!
+
+---
+
+## 🛠️ Tecnologías utilizadas
+
+- ⚛️ **React.js** – Para construir una interfaz de usuario moderna y reactiva.
+- 🌐 **Express.js + Node.js** – Backend ágil y poderoso.
+- 🗃️ **MongoDB** – Base de datos NoSQL para un manejo dinámico de la información hotelera.
+- 🛡️ **JWT** – Seguridad y control de acceso (si ya está implementado).
+- 💻 **Axios** – Para conectar con el backend sin dramas.
+
+---
+
+## ⚙️ Cómo ejecutar el proyecto
+
+```bash
+# Clonar el repositorio
+git clone https://github.com/tu-usuario/nombre-del-repo.git
+
+# Ir al directorio del proyecto
+cd nombre-del-repo
+
+# Instalar dependencias del backend
+cd backend
+npm install
+
+# Instalar dependencias del frontend
+cd ../frontend
+npm install
+
+# Ejecutar el backend
+cd ../backend
+npm start
+
+# En una nueva terminal, ejecutar el frontend
+cd ../frontend
+npm start
