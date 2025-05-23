@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import { useHotels } from "../../Shared/hooks/useHotels";
+import { useHotels } from "../../shared/hooks/useHotels";
 import toast from "react-hot-toast";
 import { Pencil, Trash2, Plus } from "lucide-react";
 import ModalAddHotel from "../Modal/ModalAddHotel";
-import {useAddHotel} from '../../Shared/hooks/useAddHotel'
-import {useDeleteHotel} from '../../Shared/hooks/useDeleteHotel'
+import {useAddHotel} from '../../shared/hooks/useAddHotel'
+import {useDeleteHotel} from '../../shared/hooks/useDeleteHotel'
 import ModalEditHotel from "../Modal/ModalUpdateHotel";
-import { useUpdateHotel } from "../../Shared/hooks/useUpdateHotel"; 
+import { useUpdateHotel } from "../../shared/hooks/useUpdateHotel"; 
 
 const HotelsTable = () => {
   const { getHotels, hotels, isLoading } = useHotels();
