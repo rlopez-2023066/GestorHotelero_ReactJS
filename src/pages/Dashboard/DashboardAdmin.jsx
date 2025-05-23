@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import SideBarAdmin from '../../Components/SlideBar/SideBarAdmin';
-import HotelsTable from '../../Components/Tables/HotelsTable';
+import SideBarAdmin from './../../components/SlideBar/SideBarAdmin';
+import HotelsTable from './../../components/Tables/HotelsTable';
 
 const DashboardAdmin = () => {
   const [selectedOption, setSelectedOption] = useState("hoteles");
