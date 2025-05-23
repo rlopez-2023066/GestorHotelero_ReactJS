@@ -7,19 +7,11 @@ const apiClient = axios.create(
     }
 )
 
-apiClient.interceptors.request.use((config) => {
-  const token = localStorage.getItem("token");
-  if (token) {
-    config.headers.Authorization = `Bearer ${token}`;
-  }
-  return config;
-});
+
 
 export const registerRequest = async(user)=> {
     try{
-        return await apiClient.get('/register', user, {
-            type: 'multipart/form-data'
-        })
+        return await apiClient.post('/register', user)
     }catch(error){
         return {
             error: true,
