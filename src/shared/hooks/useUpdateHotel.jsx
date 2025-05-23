@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { updateHotelRequest } from "../../Services/api";
+import { updateHotelRequest } from "./../../services/api";
 import toast from "react-hot-toast";
 
 export const useUpdateHotel = (onSuccess) => {
