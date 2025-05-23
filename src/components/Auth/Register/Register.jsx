@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Mail, Lock, User, Phone } from 'lucide-react';
 import imgLogin from './../../../img/Logo_img1.jpg';
-import { useRegister } from '../../../Shared/hooks/useRegister';
+import { useRegister } from '../../../shared/hooks/useRegister';
 import {
   validateName,
   validateSurName,
@@ -18,7 +18,7 @@ import {
   passwordValidationMessage,
   passConfirmValidationMessage,
   phoneValidationMessage
-} from '../../../Shared/validations/validator';
+} from '../../../shared/validations/validator';
 
 export const Register = ({ switchAuthHandler }) => {
   const initialForm = {
