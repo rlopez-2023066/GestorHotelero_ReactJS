@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { Login } from '../../Components/Auth/Login/Login';
-import { Register } from '../../Components/Auth/Register/Register';
-import Carousel from '../../Components/Cards/Carousel/Carousel';
+import { Login } from '../../components/Auth/Login/Login';
+import { Register } from '../../components/Auth/Register/Register';
+import Carousel from '../../components/Cards/Carousel/Carousel';
 
 const AuthContainer = styled.div`
   display: flex;
