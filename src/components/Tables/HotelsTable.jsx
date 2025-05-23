@@ -29,12 +29,6 @@ const HotelsTable = () => {
     if (!confirmed) return;
 
     await deleteHotel(hotelId);
-
-    if (deleteError) {
-      toast.error(deleteError);
-    } else {
-      toast.success("Hotel eliminado correctamente");
-    }
   };
 
   const handleAddHotel = (newHotel) => {
@@ -44,16 +38,15 @@ const HotelsTable = () => {
     }
     console.log(dataToSend);
     
-    
     addHotel(dataToSend);
     setIsModalOpen(false);
   };
 
   const handleEdit = (hotelId) => {
-  const selectedHotel = hotels.find(hotel => hotel._id === hotelId);
-  if (!selectedHotel) return;
-  setHotelToEdit(selectedHotel);
-  setIsEditModalOpen(true);
+    const selectedHotel = hotels.find(hotel => hotel._id === hotelId);
+    if (!selectedHotel) return;
+    setHotelToEdit(selectedHotel);
+    setIsEditModalOpen(true);
   };
 
   const handleUpdateHotel = async (updatedHotelData) => {
@@ -137,11 +130,13 @@ const HotelsTable = () => {
                         onClick={() => handleEdit(hotel._id)}
                         className="text-blue-600 hover:text-blue-900 p-1 rounded hover:bg-blue-50"
                         aria-label="Editar"
+                        disabled={updating}
                       >
                         <Pencil className="w-5 h-5" />
                       </button>
                       <button
                         onClick={() => handleDelete(hotel._id)}
+                        disabled={deleting}
                         className="text-red-600 hover:text-red-900 p-1 rounded hover:bg-red-50"
                         aria-label="Eliminar"
                       >
@@ -171,6 +166,7 @@ const HotelsTable = () => {
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         onSubmit={handleAddHotel}
+        isLoading={adding}
       />
 
       {/* Modal para editar hotel */}
@@ -179,6 +175,7 @@ const HotelsTable = () => {
         onClose={() => setIsEditModalOpen(false)}
         onSubmit={handleUpdateHotel}
         initialData={hotelToEdit}
+        isLoading={updating}
       />
 
     </div>
