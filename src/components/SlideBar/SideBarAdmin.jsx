@@ -8,11 +8,13 @@ const SideBarAdmin = ({ onSelectOption }) => {
 
   const handleLogout = () => {
     localStorage.removeItem('token'); 
+    localStorage.removeItem('user'); 
+
     navigate('/auth'); 
   };
 
   return (
-    <aside className="flex flex-col w-64 h-screen px-5 py-8 overflow-y-auto bg-gradient-to-r from-teal-400 to-yellow-200">
+    <aside className="flex flex-col w-64 h-screen px-5 py-8 overflow-y-auto bg-gradient-to-r from-violet-200 to-pink-200">
       <a href="#">
         <img className="w-50 h-50" src={imgLogin} alt="Logo" />
       </a>
