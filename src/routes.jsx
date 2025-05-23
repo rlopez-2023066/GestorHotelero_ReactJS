@@ -1,9 +1,9 @@
-import HotelsTable from "./Components/Tables/HotelsTable";
-import { AuthPages } from "./Pages/Auth/AuthPages";
-import DashboardAdmin from "./Pages/Dashboard/DashboardAdmin";
-import { NotFoundPages } from "./Pages/NotFound/NotFoundPages";
-import DashboardAdminHotel from "./Pages/Dashboard/DashboardAdminHotel";
-import { DashboardClient } from "./Pages/Dashboard/DashboardClient";
+import HotelsTable from "./components/Tables/HotelsTable";
+import { AuthPages } from "./pages/Auth/AuthPages";
+import DashboardAdmin from "./pages/Dashboard/DashboardAdmin";
+import { NotFoundPages } from "./pages/NotFound/NotFoundPages";
+import DashboardAdminHotel from "./pages/Dashboard/DashboardAdminHotel";
+import { DashboardClient } from "./pages/Dashboard/DashboardClient";
 import ProtectedRoute from "./Shared/hooks/ProtectedRoute";
 
 export const routes = [
