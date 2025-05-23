@@ -21,7 +21,7 @@ export const validateEmail = (email)=>{
 
 /* ----------------- VALIDACIÓN DE NOMBRE DE USUARIO ------------------- */
 export const validateUsername = (username)=>{
-    const regex = /^\S{3,16}$/
+    const regex = /^\S{3,20}$/
     return regex.test(username)
 }
 /* ----------------- VALIDACIÓN DE NOMBRE DE USUARIO ------------------- */
@@ -56,7 +56,7 @@ export const validatePassConfirm = (password, passConfirm)=>{
 export const nameValidationMessage ='El nombre debe contener entre 3 y 16 caracteres (Sin espacios)'
 export const surNameValidationMessage = 'El apellido debe contener entre 3 y 16 caracteres (Sin espacios)'
 export const emailValidationMessage = 'Por favor ingresa un correo válido'
-export const usernameValidationMessage = 'El nombre de usuario debe contener entre 3 y 16 caracteres (Sin espacios)'
+export const usernameValidationMessage = 'El nombre de usuario debe contener entre 3 y 8 caracteres (Sin espacios) '
 export const passwordValidationMessage = 'La contraseña debe tener entre 6 y 30 caracteres, sin espacios'
 export const passConfirmValidationMessage = 'Las contraseñas no coinciden'
 export const phoneValidationMessage = 'Debe de ser un numero valido de 8 caracteres'
