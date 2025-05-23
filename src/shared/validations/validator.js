@@ -1,14 +1,14 @@
 
 //Crear todas las validaciones de Campos
 
-export const validateName = (name)=>{
-    const regex = /^\S{3,16}$/
-    return regex.test(name)
+export const validateName = (name) => {
+  const regex = /^(?!.*\s$)[\p{L}\s]{3,30}$/u;
+  return regex.test(name);
 }
 
-export const validateSurName = (name)=>{
-    const regex = /^\S{3,16}$/
-    return regex.test(name)
+export const validateSurName = (name) => {
+  const regex = /^(?!.*\s$)[\p{L}\s]{3,30}$/u;
+  return regex.test(name);
 }
 
 
@@ -24,6 +24,12 @@ export const validateUsername = (username)=>{
     const regex = /^\S{3,20}$/
     return regex.test(username)
 }
+
+export const validateLogin = (username) => {
+  const regex = /^(?:[a-zA-Z0-9._-]{3,60}|[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,60})$/;
+  return regex.test(username);
+}
+
 /* ----------------- VALIDACIÓN DE NOMBRE DE USUARIO ------------------- */
 
 /* ----------------- VALIDACIÓN DE CONTRASEÑA ------------------- */
@@ -53,10 +59,11 @@ export const validatePassConfirm = (password, passConfirm)=>{
 /* ----------------- MENSAJES GENERALES DE VALIDACIÓN ------------------- */
 /* ---------------------------------------------------------------------- */
 
-export const nameValidationMessage ='El nombre debe contener entre 3 y 16 caracteres (Sin espacios)'
-export const surNameValidationMessage = 'El apellido debe contener entre 3 y 16 caracteres (Sin espacios)'
+export const nameValidationMessage = 'El nombre debe tener entre 3 y 30 caracteres y no debe terminar en espacio';
+export const surNameValidationMessage = 'El apellido debe tener entre 3 y 30 caracteres y no debe terminar en espacio';
 export const emailValidationMessage = 'Por favor ingresa un correo válido'
-export const usernameValidationMessage = 'El nombre de usuario debe contener entre 3 y 8 caracteres (Sin espacios) '
+export const usernameValidationMessage = 'El nombre de usuario debe contener entre 3 y 20 caracteres (Sin espacios) '
+export const validateLoginMessage ='Ingrese un Username o Correo Valido'
 export const passwordValidationMessage = 'La contraseña debe tener entre 6 y 30 caracteres, sin espacios'
 export const passConfirmValidationMessage = 'Las contraseñas no coinciden'
 export const phoneValidationMessage = 'Debe de ser un numero valido de 8 caracteres'
