@@ -1,6 +1,6 @@
 import { useState } from "react";
 import toast from 'react-hot-toast';
-import { getHotelsRequest } from "../../Services/api";
+import { getHotelsRequest } from "./../../services/api";
 
 export const useHotels = () => {
     const [isLoading, setIsLoading] = useState(false);
