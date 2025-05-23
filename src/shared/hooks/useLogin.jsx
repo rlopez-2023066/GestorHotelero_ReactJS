@@ -47,7 +47,7 @@ switch (role) {
     navigate('/dashboardClient');
     break;
   default:
-    navigate('/dashboardGeneral');
+    navigate('*');
     break;
 }
 
