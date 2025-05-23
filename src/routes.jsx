@@ -1,10 +1,9 @@
-import HotelsTable from "./components/Tables/HotelsTable";
 import { AuthPages } from "./pages/Auth/AuthPages";
 import DashboardAdmin from "./pages/Dashboard/DashboardAdmin";
 import { NotFoundPages } from "./pages/NotFound/NotFoundPages";
 import DashboardAdminHotel from "./pages/Dashboard/DashboardAdminHotel";
 import { DashboardClient } from "./pages/Dashboard/DashboardClient";
-import ProtectedRoute from "./Shared/hooks/ProtectedRoute";
+import ProtectedRoute from "./shared/hooks/ProtectedRoute";
 
 export const routes = [
     {
