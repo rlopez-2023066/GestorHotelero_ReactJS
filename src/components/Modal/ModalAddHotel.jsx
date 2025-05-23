@@ -10,7 +10,7 @@ import {
   categoryErrorMessage,
   descriptionErrorMessage,
   telephoneErrorMessage,
-} from '../../Shared/validations/validator';
+} from '../../shared/validations/validator';
 
 const ModalAddHotel = ({ isOpen, onClose, onSubmit }) => {
   const [form, setForm] = useState({
